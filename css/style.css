@@ -96,25 +96,15 @@ img {
   margin-left: 93px;
 }
 
-.nav-item:not(:last-child) .contacts-item:not(:last-child) {
+.nav-item:not(:last-child),
+.contacts-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.logo-accent {
-  color: var(--accent-text-color);
-}
-
-.item-link {
-  color: var(--primary-text-color);
-  font-size: 14px;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.nav-accent {
-  color: var(--accent-text-color);
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .nav-logo {
@@ -126,18 +116,23 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
+.logo-accent {
+  color: var(--accent-text-color);
+}
+
+.item-link {
+  color: var(--primary-text-color);
+}
+
+.nav-accent {
+  color: var(--accent-text-color);
+}
+
 .contacts-link {
   display: flex;
   align-items: center;
   color: var(--secondary-text-color);
-}
-
-.contacts-link {
-  font-size: 14px;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 }
 
 .contacts-link,
@@ -146,6 +141,14 @@ img {
 
   padding-top: 32px;
   padding-bottom: 32px;
+
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-link:hover,
@@ -153,12 +156,6 @@ img {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-text-color);
-}
-
-.contacts-icon {
-  fill: currentColor;
-  margin-right: 10px;
-  vertical-align: middle;
 }
 
 .active {
@@ -176,6 +173,12 @@ img {
   background-color: var(--accent-text-color);
   border-radius: 2px;
   transform: translateY(25%);
+}
+
+.contacts-icon {
+  fill: currentColor;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 /* =========== HERO ==========*/
@@ -225,6 +228,7 @@ img {
   letter-spacing: 0.06em;
   line-height: 1.87;
   align-items: center;
+  cursor: pointer;
 }
 
 /* ========= ADVANTAGES ======== */
@@ -264,7 +268,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
-  cursor: pointer;
 }
 
 .advantage-text {
@@ -309,6 +312,7 @@ img {
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
+
   transform: translateY(0);
 }
 
@@ -375,6 +379,9 @@ img {
   height: 44px;
   border-radius: 50%;
   color: #afb1b8;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -407,6 +414,9 @@ img {
   height: 90px;
   border: 1px solid;
   border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-logo {
@@ -447,14 +457,18 @@ img {
   border-radius: 4px;
   cursor: pointer;
   border: none;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-button:hover,
 .filters-button:focus {
   background-color: var(--accent-text-color);
   color: var(--reserve-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ====== PORTFOLIO PROJECTS ======== */
@@ -476,6 +490,7 @@ img {
 
 .projects-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-link:hover,
@@ -516,17 +531,6 @@ img {
   letter-spacing: 0.03;
 }
 
-/* ====== FOOTER ======== */
-.footer {
-  background-color: #2f303a;
-}
-
-.footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  display: flex;
-}
-
 .thumb {
   position: relative;
   overflow: hidden;
@@ -555,6 +559,16 @@ img {
   transform: translateY(0);
 }
 
+/* ====== FOOTER ======== */
+.footer {
+  background-color: #2f303a;
+}
+
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+}
 .footer-social {
   margin-left: 70px;
   padding-top: 12px;
@@ -582,6 +596,8 @@ img {
   border-radius: 50%;
   color: var(--reserve-text-color);
   background-color: #ffffff10;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon {
